@@ -226,6 +226,11 @@ if(isset($_GET['customer_status'])){
     include("customer_status.php");
     
     }
+if(isset($_GET['receveur_status'])){
+
+    include("receveur_status.php");
+    
+    }
 
 
 if(isset($_GET['view_orders'])){

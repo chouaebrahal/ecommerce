@@ -51,7 +51,7 @@ echo "
 
 <center>
 
-<img src='customer_images/$receveur_image' class='img-responsive'>
+<img src='receveur_images/$receveur_image' class='img-responsive'>
 
 </center>
 

@@ -90,13 +90,15 @@ if(isset($_SESSION['customer_email'])||isset($_SESSION['receveur_email'])){
                
               </a>
               </li>
-
-            <li class="categories__item">
-              <a class="categories__link" href="#">
-                Points
-               
-              </a>
-            </li>
+              <?php if(isset($_SESSION['receveur_email'])){
+                          echo '<li class="categories__item">
+                          <a class="categories__link" href="points.php">
+                            Points
+                           
+                          </a>
+                        </li>';
+                          }?>
+            
 
           <li class="categories__item">
               <a class="categories__link" href="user/my_account.php?my_orders">

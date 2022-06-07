@@ -24,7 +24,7 @@ $status_id = $_GET['customer_status'];
 $requet = "SELECT * FROM customers WHERE customer_id='$status_id'";
 
 $run_cus = mysqli_query($con,$requet);
-print_r($run_cus);
+
 if($row_cus = mysqli_fetch_array($run_cus)){
 
 $cus_status = $row_cus['customer_status'];

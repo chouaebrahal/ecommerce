@@ -126,8 +126,15 @@ $i++;
 <td>
 <div class="btn btn-success" style="text-decoration:none;">
 <a href="index.php?receveur_status=<?php echo $c_id; ?>" >
+<?php 
+if($c_status=='active'){
+    echo $c_status;
+}else{
+    echo 'inactive';
+}  
 
-Active
+
+?>
 
 </a>
 </div>

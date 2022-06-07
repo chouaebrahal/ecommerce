@@ -2,7 +2,6 @@
 <div class="box"><!-- box Starts -->
 
 <?php
-print_r($_SESSION);
 if(isset($_SESSION['customer_email'])){
 
 

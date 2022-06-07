@@ -14,7 +14,7 @@
 </center>
 
 <?php
-
+if(isset($_SESSION['customer_email'])){
 $c_email = $_SESSION['customer_email'];
 
 if(isset($_POST['yes'])){
@@ -39,6 +39,32 @@ if(isset($_POST['no'])){
 
 echo "<script>window.open('my_account.php?my_orders','_self')</script>";
 
+}
+}elseif(isset($_SESSION['receveur_email'])){
+    $c_email = $_SESSION['receveur_email'];
+    if(isset($_POST['yes'])){
+
+        $delete_receveur = "delete from receveurs where receveur_email='$c_email'";
+        
+        $run_delete = mysqli_query($con,$delete_receveur);
+        
+        if($run_delete){
+        
+        session_destroy();
+        
+        echo "<script>alert('Your Account Has Been Deleted! Good By')</script>";
+        
+        echo "<script>window.open('../index.php','_self')</script>";
+        
+        }
+        
+        }
+        
+        if(isset($_POST['no'])){
+        
+        echo "<script>window.open('my_account.php?my_orders','_self')</script>";
+        
+        }
 }
 
 
